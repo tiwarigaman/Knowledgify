@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/imageOnboarding"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="250dp"
         android:scaleType="centerCrop"
         tools:ignore="ContentDescription" />
 
@@ -23,7 +23,7 @@
         android:fontFamily="@raw/urbanist_bold"
         android:textStyle="bold"
         android:gravity="center"
-        android:textColor="@android:color/black" />
+        android:textColor="@color/lite_black" />
 
     <TextView
         android:id="@+id/textDescription"
@@ -34,6 +34,6 @@
         android:fontFamily="@raw/urbanist_regular"
         android:textSize="16sp"
         android:gravity="center"
-        android:textColor="@android:color/darker_gray" />
+        android:textColor="@color/lite_black" />
 
 </RelativeLayout>

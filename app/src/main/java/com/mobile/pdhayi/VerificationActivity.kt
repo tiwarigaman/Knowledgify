@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
@@ -13,13 +12,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import okhttp3.MediaType.Companion.toMediaTypeOrNull
-import okhttp3.OkHttpClient
-import okhttp3.Request
-import okhttp3.RequestBody
-import okhttp3.Response
 import org.json.JSONObject
-import java.io.IOException
 
 class VerificationActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -58,18 +51,16 @@ class VerificationActivity : AppCompatActivity() {
         val buttonSubmit: Button = findViewById(R.id.buttonSubmit)
         buttonSubmit.setOnClickListener {
             val otp = "${otpDigit1.text}${otpDigit2.text}${otpDigit3.text}${otpDigit4.text}"
-            if (otp.length == 4 && email.isNotEmpty() and password.isNotEmpty() and firstName.isNotEmpty() and lastName.isNotEmpty()) {
+            if (otp.length == 4 && email.isNotEmpty() && password.isNotEmpty() && firstName.isNotEmpty() && lastName.isNotEmpty()) {
                 verifyOtp(otp)
             } else {
                 updateOtpFieldBackground(success = false)
-                Toast.makeText(this, "Incorrect OTPm", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Incorrect OTP", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun verifyOtp(otp: String) {
-        val client = OkHttpClient()
-        val JSON = "application/json; charset=utf-8".toMediaTypeOrNull()
         val json = JSONObject().apply {
             put("firstName", firstName)
             put("lastName", lastName)
@@ -77,36 +68,20 @@ class VerificationActivity : AppCompatActivity() {
             put("password", password)
             put("otp", otp)
         }
-        val body = RequestBody.create(JSON, json.toString())
-        val request = Request.Builder()
-            .url("https://knowledgify-backend.onrender.com/api/verify")
-            .post(body)
-            .build()
 
-        client.newCall(request).enqueue(object : okhttp3.Callback {
-            override fun onFailure(call: okhttp3.Call, e: IOException) {
-                e.printStackTrace()
-            }
-
-            override fun onResponse(call: okhttp3.Call, response: Response) {
-                if (response.isSuccessful) {
-                    val responseBody = response.body?.string()
-                    Log.d("API Response", responseBody.toString())
-                    runOnUiThread {
-                        updateOtpFieldBackground(success = true)
-                        Toast.makeText(this@VerificationActivity, "OTP Verified!", Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this@VerificationActivity, HomeActivity::class.java))
-                        finish()
-                    }
+        ApiClient.post(ApiUrls.VERIFY, json) { success,code, response ->
+            runOnUiThread {
+                if (success) {
+                    updateOtpFieldBackground(success = true)
+                    Toast.makeText(this@VerificationActivity, "OTP Verified!", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this@VerificationActivity, HomeActivity::class.java))
+                    finish()
                 } else {
-                    runOnUiThread {
-                        updateOtpFieldBackground(success = false)
-                        Toast.makeText(this@VerificationActivity, "Incorrect OTP $otp" +
-                                "$email $password $firstName $lastName", Toast.LENGTH_SHORT).show()
-                    }
+                    updateOtpFieldBackground(success = false)
+                    Toast.makeText(this@VerificationActivity, "Incorrect OTP: $response", Toast.LENGTH_SHORT).show()
                 }
             }
-        })
+        }
     }
 
     private fun setupOtpInput(currentEditText: EditText, nextEditText: EditText?) {

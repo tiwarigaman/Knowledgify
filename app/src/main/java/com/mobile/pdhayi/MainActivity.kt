@@ -34,11 +34,11 @@ class MainActivity : AppCompatActivity() {
 
 
         onboardingItems = listOf(
-            OnboardingItem(R.drawable.ic_launcher_foreground, "Title 1", "Description 1"),
-            OnboardingItem(R.drawable.ic_launcher_foreground, "Title 1", "Description 1"),
-            OnboardingItem(R.drawable.ic_launcher_background, "Title 2", "Description 2"),
-            OnboardingItem(R.drawable.ic_launcher_background, "Title 2", "Description 2"),
-            OnboardingItem(R.drawable.ic_launcher_foreground, "Title 3", "Description 3")
+            OnboardingItem(R.drawable.education, "Learn with Fun: Interactive Lessons for All Ages", "Engage in interactive, fun lessons across various subjects"),
+            OnboardingItem(R.drawable.education, "Math Mastery: Your Path to Numerical Excellence", "Achieve numerical excellence with engaging math tutorials"),
+            OnboardingItem(R.drawable.education, "Explorer: Discover the Wonders of Science", "Dive into science with interactive experiments and lessons"),
+            OnboardingItem(R.drawable.education, "Master New Languages with Ease", "Learn new languages through immersive, fun exercises"),
+            OnboardingItem(R.drawable.education, "History Hub: Uncover the Past, Understand the Future", "Explore history through engaging and interactive lessons")
         )
 
         adapter = OnboardingAdapter(onboardingItems)
