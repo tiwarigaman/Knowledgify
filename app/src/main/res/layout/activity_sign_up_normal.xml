@@ -274,7 +274,7 @@
             tools:ignore="HardcodedText" />
 
         <TextView
-            android:id="@+id/userSignUp"
+            android:id="@+id/userSignIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text=" Sign In"
@@ -336,7 +336,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <TextView
-            android:id="@+id/googleSignIn"
+            android:id="@+id/googleSignInOther"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edit_text_bg"
@@ -369,7 +369,7 @@
         <!--            />-->
 
         <TextView
-            android:id="@+id/fbSignIn"
+            android:id="@+id/fbSignInOther"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
