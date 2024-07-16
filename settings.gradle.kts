@@ -18,7 +18,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
 rootProject.name = "pdhayi"
 include(":app")
- 

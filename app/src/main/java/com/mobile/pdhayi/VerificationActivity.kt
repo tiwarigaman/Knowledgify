@@ -69,19 +69,24 @@ class VerificationActivity : AppCompatActivity() {
             put("otp", otp)
         }
 
-        ApiClient.post(ApiUrls.VERIFY, json) { success,code, response ->
-            runOnUiThread {
-                if (success) {
-                    updateOtpFieldBackground(success = true)
+        UserRepository.verifyUser(this,json,
+            onSuccess = {
+                updateOtpFieldBackground(success = true)
+                runOnUiThread {
                     Toast.makeText(this@VerificationActivity, "OTP Verified!", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this@VerificationActivity, HomeActivity::class.java))
-                    finish()
-                } else {
-                    updateOtpFieldBackground(success = false)
-                    Toast.makeText(this@VerificationActivity, "Incorrect OTP: $response", Toast.LENGTH_SHORT).show()
                 }
+//                Toast.makeText(this@VerificationActivity, "OTP Verified!", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this@VerificationActivity, HomeActivity::class.java))
+                finish()
+            },
+            onFailure = { code, message ->
+                updateOtpFieldBackground(success = false)
+                runOnUiThread {
+                    Toast.makeText(this@VerificationActivity, "Incorrect OTP: $message", Toast.LENGTH_SHORT).show()
+                }
+//                Toast.makeText(this@VerificationActivity, "Incorrect OTP: $message", Toast.LENGTH_SHORT).show()
             }
-        }
+        )
     }
 
     private fun setupOtpInput(currentEditText: EditText, nextEditText: EditText?) {

@@ -49,9 +49,12 @@ dependencies {
     implementation(libs.androidx.viewpager2)
     implementation(libs.material.v130)
 
+    implementation(libs.play.services.auth)
 
     implementation(libs.okhttp)
     implementation(libs.volley)
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+
 }
