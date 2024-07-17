@@ -21,6 +21,23 @@ object UserRepository {
             }
         }
     }
+
+    fun loginUser(
+        context: Context,
+        json: JSONObject,
+        onSuccess: (String) -> Unit,
+        onFailure: (Int, String) -> Unit
+    ) {
+        val url = BASE_URL + ApiUrls.LOGIN
+        ApiClient.post(url, json) { success, code, responseBody ->
+            if (success) {
+                onSuccess(responseBody ?: "")
+            } else {
+                onFailure(code, responseBody ?: "Unknown error")
+            }
+        }
+    }
+
     fun verifyUser(context: Context?, json: JSONObject, onSuccess: (String) -> Unit, onFailure: (String, Int) -> Unit) {
         val commonParams = CommonParams.buildCommonParams(context)
         json.put("commonParams", commonParams)

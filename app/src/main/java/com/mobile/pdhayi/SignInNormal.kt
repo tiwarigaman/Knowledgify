@@ -54,23 +54,21 @@ class SignInNormal : AppCompatActivity() {
                     put("email", email.text.toString())
                     put("password", password.text.toString())
                 }
-                ApiClient.post(ApiUrls.LOGIN, json) { success, code, responseBody ->
+                UserRepository.loginUser(applicationContext, json, onSuccess = { responseBody ->
                     runOnUiThread {
-                        if (success) {
-                            Toast.makeText(this, responseBody, Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this, HomeActivity::class.java))
-                            finish()
-                        } else {
-                            if (code == 404) {
-                                Toast.makeText(applicationContext, "User does not exist, please try to signup", Toast.LENGTH_SHORT).show()
-                            } else if (code == 401) {
-                                Toast.makeText(applicationContext, "Invalid Credentials", Toast.LENGTH_SHORT).show()
-                            } else {
-                                Toast.makeText(applicationContext, "Server error", Toast.LENGTH_SHORT).show()
-                            }
+                        Toast.makeText(applicationContext, responseBody, Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(applicationContext, HomeActivity::class.java))
+                        finish()
+                    }
+                }, onFailure = { code, responseBody ->
+                    runOnUiThread {
+                        when (code) {
+                            404 -> Toast.makeText(applicationContext, "User does not exist, please try to signup", Toast.LENGTH_SHORT).show()
+                            401 -> Toast.makeText(applicationContext, "Invalid Credentials", Toast.LENGTH_SHORT).show()
+                            else -> Toast.makeText(applicationContext, "Server error: $responseBody", Toast.LENGTH_SHORT).show()
                         }
                     }
-                }
+                })
             }
         }
     }
