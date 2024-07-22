@@ -12,9 +12,14 @@
         android:title="Search"
         tools:ignore="HardcodedText" />
     <item
-        android:id="@+id/navigation_add"
+        android:id="@+id/navigation_add_post"
         android:icon="@drawable/baseline_add_24"
         android:title="Add"
+        tools:ignore="HardcodedText" />
+    <item
+        android:id="@+id/navigation_lecture"
+        android:icon="@drawable/baseline_video_library_24"
+        android:title="Lecture"
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/navigation_profile"
