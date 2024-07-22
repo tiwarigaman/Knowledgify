@@ -57,9 +57,11 @@ dependencies {
     implementation(libs.converter.gson)
 
 
-    //fb login
+    implementation(libs.imageslideshow)
+    implementation(libs.circleimageview)
+    implementation(libs.glide)
+
+//      fb login
 //    implementation(libs.facebook.login)
-
-
 
 }
