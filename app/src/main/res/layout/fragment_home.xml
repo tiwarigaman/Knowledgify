@@ -38,7 +38,7 @@
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_gravity="center"
-            android:src="@drawable/outline_message_24"
+            android:src="@drawable/send"
             tools:ignore="ContentDescription" />
     </RelativeLayout>
 
