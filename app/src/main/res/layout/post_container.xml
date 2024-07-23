@@ -5,18 +5,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     >
-    <TextView
-        android:id="@+id/item_head_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        />
-    <TextView
-        android:id="@+id/item_body_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        />
 
     <View
         android:layout_width="match_parent"
@@ -29,7 +17,7 @@
         android:layout_height="50dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imageStory"
+            android:id="@+id/personImagePost"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentStart="true"
@@ -46,15 +34,18 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="5dp"
             android:gravity="center"
-            android:layout_toEndOf="@+id/imageStory"
+            android:fontFamily="@raw/urbanist_bold"
+            android:layout_toEndOf="@+id/personImagePost"
             android:text="@string/app_name"
             android:textColor="@color/lite_white"
             android:textSize="12sp"
             tools:ignore="RelativeOverlap" />
 
         <ImageView
+            android:id="@+id/more_post"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_marginEnd="5dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
@@ -62,31 +53,90 @@
             tools:ignore="ContentDescription" />
 
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/desc_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/app_name"
+        android:fontFamily="@raw/urbanist_regular"
+        android:textColor="@color/lite_white"
+        android:textSize="14sp" />
+
+
     <ImageView
         android:id="@+id/imagePost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:paddingTop="5dp"
+        android:layout_height="40dp">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:id="@+id/bulb_post"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="5dp"
-            android:src="@drawable/bulb_off" />
+            android:layout_marginStart="10dp"
+            android:src="@drawable/lightbulb_off"
+            tools:ignore="ContentDescription" />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:id="@+id/comment_post"
+            android:layout_width="24dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/comment_"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/save_post"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="35dp"
-            android:src="@drawable/comment" />
-
+            android:src="@drawable/bookmark_undone"
+            tools:ignore="ContentDescription" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        tools:ignore="TextSizeCheck">
+
+        <TextView
+            android:id="@+id/like_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@raw/urbanist_regular"
+            android:text="0 likes"
+            android:textColor="@color/lite_white"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/date_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@raw/urbanist_regular"
+        android:text="date"
+        android:textColor="@color/lite_white"
+        android:textSize="11sp"
+        android:layout_marginBottom="10dp"
+        tools:ignore="HardcodedText" />
 </LinearLayout>
