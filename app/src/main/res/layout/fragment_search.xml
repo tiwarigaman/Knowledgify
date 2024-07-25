@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
     tools:context=".fragment.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search Connections"
+        android:inputType="textPersonName"
+        android:layout_margin="10dp"
+        android:background="@drawable/seacrh_bar"
+        android:padding="10dp"
+        android:drawableStart="@drawable/baseline_search_24"
+        android:textColorHint="#dedede"
+        android:textSize="16sp"
+        android:textColor="#dedede"
+        tools:ignore="Autofill,HardcodedText" />
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        >-->
+<!--        -->
+
+<!--    </RelativeLayout>-->
+
+</LinearLayout>
