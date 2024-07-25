@@ -22,9 +22,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        style="@style/CustomBottomNavigationView"
+        app:itemIconTint="@color/nav_item_icon_tint"
         app:layout_constraintStart_toStartOf="parent"
+        app:itemTextAppearanceActive="@style/BottomNavigationViewSelectedTextStyle"
+        app:itemTextAppearanceInactive="@style/BottomNavigationViewUnselectedTextStyle"
         app:menu="@menu/bottom_navigation_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

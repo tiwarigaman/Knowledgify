@@ -18,12 +18,12 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/personImagePost"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_margin="5dp"
+            android:layout_margin="7dp"
             android:src="@drawable/ic_launcher_background" />
 
         <TextView
@@ -32,20 +32,21 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
+            android:textStyle="bold"
             android:layout_marginStart="5dp"
             android:gravity="center"
-            android:fontFamily="@raw/urbanist_bold"
+            android:fontFamily="@raw/sfprodisplayregular"
             android:layout_toEndOf="@+id/personImagePost"
             android:text="@string/app_name"
             android:textColor="@color/lite_white"
-            android:textSize="12sp"
+            android:textSize="13sp"
             tools:ignore="RelativeOverlap" />
 
         <ImageView
             android:id="@+id/more_post"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginEnd="10dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
@@ -58,13 +59,12 @@
         android:id="@+id/desc_post"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="7dp"
         android:layout_marginBottom="10dp"
         android:text="@string/app_name"
-        android:fontFamily="@raw/urbanist_regular"
+        android:fontFamily="@raw/sfprodisplaymedium"
         android:textColor="@color/lite_white"
-        android:textSize="14sp" />
-
+        android:textSize="13sp" />
 
     <ImageView
         android:id="@+id/imagePost"
@@ -74,13 +74,13 @@
         />
     <RelativeLayout
         android:layout_width="match_parent"
-        android:paddingTop="5dp"
+        android:paddingTop="7dp"
         android:layout_height="40dp">
 
         <ImageView
             android:id="@+id/bulb_post"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="10dp"
@@ -99,21 +99,21 @@
 
         <ImageView
             android:id="@+id/save_post"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="5dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="35dp"
-            android:src="@drawable/bookmark_undone"
+            android:src="@drawable/favorite"
             tools:ignore="ContentDescription" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="5dp"
+        android:paddingTop="7dp"
         tools:ignore="TextSizeCheck">
 
         <TextView
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:fontFamily="@raw/urbanist_regular"
-        android:text="date"
+        android:text="1 hour ago"
         android:textColor="@color/lite_white"
         android:textSize="11sp"
         android:layout_marginBottom="10dp"

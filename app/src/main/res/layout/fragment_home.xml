@@ -16,11 +16,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:fontFamily="@raw/urbanist_bold_italic"
+            android:fontFamily="@raw/sfprodisplayregular"
             android:gravity="center"
             android:text="Knowledgify"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="22sp"
             tools:ignore="HardcodedText" />
         <ImageView
             android:id="@+id/notifications"
@@ -28,7 +28,7 @@
             android:layout_height="30dp"
             android:layout_alignParentEnd="true"
             android:layout_gravity="center"
-            android:layout_marginEnd="50dp"
+            android:layout_marginEnd="43dp"
             android:src="@drawable/outline_notifications_24"
             tools:ignore="ContentDescription" />
 
@@ -44,7 +44,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewStory"
             android:layout_width="match_parent"
