@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#3E3E3E">
+        android:background="#1b1f23">
 
         <TextView
             android:id="@+id/invitation_count"
@@ -80,7 +80,7 @@
         android:orientation="vertical"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:background="#3E3E3E">
+        android:background="#1b1f23">
 
         <TextView
             android:layout_width="match_parent"
@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginBottom="5dp"
-        android:background="#3E3E3E">
+        android:background="#1b1f23">
 
         <TextView
             android:layout_width="match_parent"

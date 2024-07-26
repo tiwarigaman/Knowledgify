@@ -46,8 +46,8 @@ class SearchFragment : Fragment() {
         requests.add(ConnectionDataClass("https://images.indianexpress.com/2018/04/avengers-iron-man.jpg", "Iron Man", "Gave his life for save the earth"))
         requests.add(ConnectionDataClass("https://pbs.twimg.com/profile_images/1607576872589889537/mQxBneCJ_400x400.jpg", "Xavier", "Ayien ka kaheo"))
         requests.add(ConnectionDataClass("https://pbs.twimg.com/profile_images/1360181645580537860/h7vh3gGP_400x400.jpg", "John", "John bnega don. mujhe rokega kon"))
-        requests.add(ConnectionDataClass("https://i.pinimg.com/originals/56/31/22/56312264db7ff9c2cf7b11a6eccb4633.jpg", "Shin-chan", "So I thought if I put the toaster in the freezer, we could make Poptartsicles..."))
-        requests.add(ConnectionDataClass("https://humenglish.com/wp-content/uploads/2024/07/Untitled-114.jpg", "Mr. Bean", "British sitcom created by Rowan Atkinson and Richard Curtis, produced by Tiger Aspect Productions and starring Atkinson as the eponymous title ..."))
+        requests.add(ConnectionDataClass("https://i.pinimg.com/originals/56/31/22/56312264db7ff9c2cf7b11a6eccb4633.jpg", "Shin-chan", "So I thought if I put the toaster in the freezer..."))
+        requests.add(ConnectionDataClass("https://humenglish.com/wp-content/uploads/2024/07/Untitled-114.jpg", "Mr. Bean", "British sitcom created by Rowan Atkinson and Richard Curtis..."))
         // adding network
         for (i in 1..10) {
             requestsNetwork.add(SuggestionNetworkDataClass("https://humenglish.com/wp-content/uploads/2024/07/Untitled-11$i.jpg", "Name $i", "Description $i"))
