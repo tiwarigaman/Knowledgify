@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,28 +8,36 @@
     android:orientation="vertical"
     tools:context=".fragment.SearchFragment">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search Connections"
-        android:inputType="textPersonName"
         android:layout_margin="10dp"
         android:background="@drawable/seacrh_bar"
-        android:padding="10dp"
-        android:fontFamily="@raw/urbanist_regular"
         android:drawableStart="@drawable/baseline_search_24"
+        android:fontFamily="@raw/urbanist_regular"
+        android:hint="Search Connections"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textColor="#dedede"
         android:textColorHint="#dedede"
         android:textSize="16sp"
-        android:textColor="#dedede"
-        tools:ignore="Autofill,HardcodedText" />
+        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#3E3E3E"
-        >
+        android:background="#3E3E3E">
+
         <TextView
+            android:id="@+id/invitation_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@raw/urbanist_regular"
@@ -41,15 +50,74 @@
         <View
             android:layout_width="match_parent"
             android:layout_height=".5dp"
-            android:background="#dedede"
-            />
+            android:background="#dedede" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewConnection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
             />
+
+        <TextView
+            android:id="@+id/show_more_connection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@raw/urbanist_regular"
+            android:text="show more"
+            android:textSize="14sp"
+            android:textColor="@color/link_color"
+            android:paddingStart="10dp"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
 
     </LinearLayout>
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="#3E3E3E">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@raw/urbanist_regular"
+            android:text="Manage my network"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            app:drawableEndCompat="@drawable/arrow_forward"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:background="#3E3E3E">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@raw/urbanist_regular"
+            android:text="People you may know based on your recent activity"
+            android:textSize="16sp"
+            android:padding="15dp"
+            tools:ignore="HardcodedText" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewNetworkAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            />
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
