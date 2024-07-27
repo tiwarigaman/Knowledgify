@@ -1,10 +1,10 @@
 package com.mobile.pdhayi
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.mobile.pdhayi.fragment.AddPostFragment
 import com.mobile.pdhayi.fragment.HomeFragment
 import com.mobile.pdhayi.fragment.LectureFragment
 import com.mobile.pdhayi.fragment.SearchFragment
@@ -30,7 +30,11 @@ class HomeActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.navigation_home -> selectedFragment = HomeFragment()
             R.id.navigation_search -> selectedFragment = SearchFragment()
-            R.id.navigation_add_post -> selectedFragment = AddPostFragment()
+            R.id.navigation_add_post -> {
+                val intent = Intent(this, AddPost::class.java)
+                startActivity(intent)
+                return@OnNavigationItemSelectedListener true
+            }
             R.id.navigation_lecture -> selectedFragment = LectureFragment()
             R.id.navigation_profile -> selectedFragment = ProfileFragment()
         }

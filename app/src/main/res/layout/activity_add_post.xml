@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".AddPost">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_close_24"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Create Post"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="#dedede"
+            android:paddingStart="10dp"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POST"
+            android:textStyle="bold"
+            android:textColor="@color/link_color"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            android:background="@android:color/transparent"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="#dedede"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/user_normal"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Create Post"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:textColor="#dedede"
+            android:paddingStart="10dp"
+            android:textStyle="bold"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/seacrh_bar"
+        android:hint="What's on your mind?"
+        android:inputType="textMultiLine"
+        android:textSize="14sp"
+        android:gravity="start"
+        android:padding="5dp"
+        android:fontFamily="@raw/sfprodisplayregular"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        tools:ignore="Autofill,HardcodedText" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="POST"
+        android:textStyle="bold"
+        android:textColor="#dedede"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@raw/sfprodisplaymedium"
+        android:backgroundTint="@color/theme_color"
+        android:textSize="16sp"
+        android:layout_marginTop="480dp"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>
