@@ -13,22 +13,46 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-        
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/seacrh_bar"
-        android:drawableStart="@drawable/baseline_search_24"
-        android:fontFamily="@raw/urbanist_regular"
-        android:hint="Search Connections"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:padding="10dp"
-        android:textColor="#dedede"
-        android:textColorHint="#dedede"
-        android:textSize="16sp"
-        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/seacrh_bar"
+                android:drawableStart="@drawable/baseline_search_24"
+                android:fontFamily="@raw/sfprodisplayregular"
+                android:hint="Search Connections"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                android:textColor="#dedede"
+                android:layout_weight="1"
+                android:textColorHint="#dedede"
+                android:textSize="16sp"
+                tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+            <ImageView
+                android:id="@+id/notificationSearch"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginEnd="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/outline_notifications_24"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/chatSearch"
+                android:layout_width="24dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/send"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -40,7 +64,7 @@
             android:id="@+id/invitation_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@raw/urbanist_regular"
+            android:fontFamily="@raw/sfprodisplaymedium"
             android:text="Invitation (10)"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -63,7 +87,7 @@
             android:id="@+id/show_more_connection"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="@raw/urbanist_regular"
+            android:fontFamily="@raw/sfprodisplaymedium"
             android:text="show more"
             android:textSize="14sp"
             android:textColor="@color/link_color"
@@ -85,7 +109,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@raw/urbanist_regular"
+            android:fontFamily="@raw/sfprodisplaymedium"
             android:text="Manage my network"
             android:textSize="16sp"
             android:textStyle="bold"
@@ -106,7 +130,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@raw/urbanist_regular"
+            android:fontFamily="@raw/sfprodisplaymedium"
             android:text="People you may know based on your recent activity"
             android:textSize="16sp"
             android:padding="15dp"
