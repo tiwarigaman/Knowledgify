@@ -80,11 +80,65 @@
         android:inputType="textMultiLine"
         android:textSize="14sp"
         android:gravity="start"
-        android:padding="5dp"
+        android:padding="10dp"
         android:fontFamily="@raw/sfprodisplayregular"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         tools:ignore="Autofill,HardcodedText" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Photos/Videos"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:textColor="#dedede"
+        android:paddingStart="10dp"
+        android:drawablePadding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@raw/sfprodisplaymedium"
+        app:drawableStartCompat="@drawable/gallery"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PDF"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:textColor="#dedede"
+        android:paddingStart="10dp"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@raw/sfprodisplaymedium"
+        app:drawableStartCompat="@drawable/pdf"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pole"
+        android:textSize="16sp"
+        android:layout_gravity="center"
+        android:textColor="#dedede"
+        android:paddingStart="10dp"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@raw/sfprodisplaymedium"
+        app:drawableStartCompat="@drawable/options"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textColor="#dedede"
+        android:paddingStart="10dp"
+        android:drawablePadding="10dp"
+        android:layout_marginBottom="5dp"
+        tools:ignore="HardcodedText,RtlSymmetry" />
 
     <Button
         android:layout_width="match_parent"
@@ -94,10 +148,10 @@
         android:textColor="#dedede"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@raw/sfprodisplaymedium"
         android:backgroundTint="@color/theme_color"
         android:textSize="16sp"
-        android:layout_marginTop="480dp"
         tools:ignore="HardcodedText" />
 
 </LinearLayout>
