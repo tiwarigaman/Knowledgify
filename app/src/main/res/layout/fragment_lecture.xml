@@ -63,25 +63,45 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    <EditText
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:background="@drawable/seacrh_bar"
-        android:drawableStart="@drawable/my_search"
-        android:drawableEnd="@drawable/access"
-        android:fontFamily="@raw/sfprodisplayregular"
-        android:hint="Search for..."
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:ems="10"
-        android:padding="10dp"
-        android:drawablePadding="10dp"
-        android:textColor="#dedede"
-        android:textColorHint="#6D6D6D"
-        android:textSize="16sp"
-        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/lectureSearchEverything"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/seacrh_bar"
+            android:drawableStart="@drawable/my_search"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="@raw/sfprodisplayregular"
+            android:hint="Search for..."
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="#dedede"
+            android:textColorHint="#6D6D6D"
+            android:textSize="16sp"
+            tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+        <ImageView
+            android:id="@+id/categorySearchLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/lectureSearchEverything"
+            android:layout_alignEnd="@+id/lectureSearchEverything"
+            android:layout_marginEnd="10dp"
+            android:layout_alignBottom="@+id/lectureSearchEverything"
+            android:src="@drawable/category_search_background"
+            android:clickable="true"
+            android:focusable="true"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
 
     <com.denzcoskun.imageslider.ImageSlider
         android:id="@+id/image_slider_lecture"
