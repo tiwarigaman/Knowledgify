@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/course_card_round">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@color/black"
+        tools:ignore="ContentDescription" />
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="12sp"
+            android:paddingStart="10dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="#FF9B00"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/favorite"
+            android:layout_marginEnd="10dp"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course name"
+        android:textSize="14sp"
+        android:paddingStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#dedede"
+        android:fontFamily="@raw/sfprodisplaymedium"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        tools:ignore="UseCompoundDrawables">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="499/-"
+            android:textSize="12sp"
+            android:paddingStart="10dp"
+            android:layout_gravity="center"
+            android:textColor="#dedede"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:background="#dedede"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/baseline_star_rate_24"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            android:text="4.2"
+            android:textColor="#dedede"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="12dp"
+            android:background="#dedede"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            android:text="4325 Std"
+            android:textColor="#dedede"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+    </LinearLayout>
+</LinearLayout>
