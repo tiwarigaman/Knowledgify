@@ -1,5 +1,6 @@
 package com.mobile.pdhayi
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.Button
@@ -34,11 +35,11 @@ class MainActivity : AppCompatActivity() {
 
 
         onboardingItems = listOf(
-            OnboardingItem(R.drawable.education, "Learn with Fun: Interactive Lessons for All Ages", "Engage in interactive, fun lessons across various subjects"),
-            OnboardingItem(R.drawable.education, "Math Mastery: Your Path to Numerical Excellence", "Achieve numerical excellence with engaging math tutorials"),
-            OnboardingItem(R.drawable.education, "Explorer: Discover the Wonders of Science", "Dive into science with interactive experiments and lessons"),
-            OnboardingItem(R.drawable.education, "Master New Languages with Ease", "Learn new languages through immersive, fun exercises"),
-            OnboardingItem(R.drawable.education, "History Hub: Uncover the Past, Understand the Future", "Explore history through engaging and interactive lessons")
+            OnboardingItem("Learn with Fun: Interactive Lessons for All Ages", "Engage in interactive, fun lessons across various subjects",R.raw.welcome_onboarding),
+            OnboardingItem("Math Mastery: Your Path to Numerical Excellence", "Achieve numerical excellence with engaging math tutorials",R.raw.expert_led_lecture_onboarding),
+            OnboardingItem("Explorer: Discover the Wonders of Science", "Dive into science with interactive experiments and lessons",R.raw.interactive_learning_onboarding),
+            OnboardingItem( "Master New Languages with Ease", "Learn new languages through immersive, fun exercises",R.raw.community_onboarding),
+            OnboardingItem("History Hub: Uncover the Past, Understand the Future", "Explore history through engaging and interactive lessons",R.raw.mentor_onboarding)
         )
 
         adapter = OnboardingAdapter(onboardingItems)
@@ -54,6 +55,8 @@ class MainActivity : AppCompatActivity() {
         buttonSkip.setOnClickListener {
             // Handle Skip button click
             // Navigate to the main activity or close the onboarding screen
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
         }
 
         buttonNext.setOnClickListener {

@@ -1,18 +1,23 @@
 package com.mobile.pdhayi.adapter
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.mobile.pdhayi.PostCommentActivity
 import com.mobile.pdhayi.R
 import com.mobile.pdhayi.data_modal.PostDataClass
 import de.hdodenhof.circleimageview.CircleImageView
 
-class PostAdapter(private val itemList: List<PostDataClass>) : RecyclerView.Adapter<PostAdapter.MyViewHolder>() {
+class PostAdapter(private val itemList: List<PostDataClass>,
+                  private val fragmentManager: FragmentManager
+    ) : RecyclerView.Adapter<PostAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val postPersonImage: CircleImageView = itemView.findViewById(R.id.personImagePost)
@@ -49,6 +54,28 @@ class PostAdapter(private val itemList: List<PostDataClass>) : RecyclerView.Adap
                 holder.bulbIndicator.setImageResource(R.drawable.lightbulb_off)
             }
             a++
+        }
+        holder.commentPost.setOnClickListener {
+//            val comments = listOf(
+//                Comment("User 1", "https://media.licdn.com/dms/image/D4D03AQHDBktQRdQG9A/profile-displayphoto-shrink_200_200/0/1698420441044?e=2147483647&v=beta&t=Msfz2Eu7CM9GhovlxKEgfG6oP8Vsz-fDeuk3JiVduLY", "This is a comment", "2 hours ago"),
+//                Comment("User 2", "https://media.licdn.com/dms/image/D4D03AQHDBktQRdQG9A/profile-displayphoto-shrink_200_200/0/1698420441044?e=2147483647&v=beta&t=Msfz2Eu7CM9GhovlxKEgfG6oP8Vsz-fDeuk3JiVduLY", "Another comment", "1 hour ago"),
+//                Comment("User 3", "https://media.licdn.com/dms/image/D4D03AQHDBktQRdQG9A/profile-displayphoto-shrink_200_200/0/1698420441044?e=2147483647&v=beta&t=Msfz2Eu7CM9GhovlxKEgfG6oP8Vsz-fDeuk3JiVduLY", "Yet another comment", "30 minutes ago")
+//            ) // Replace with your comments data
+//
+//            val commentsAdapter = CommentsAdapter(comments)
+//            val bottomSheet = BaseBottomSheetFragment.newInstance(R.layout.fragment_comments_bottom_sheet, commentsAdapter)
+//            bottomSheet.show(fragmentManager, bottomSheet.tag)
+            val context = holder.itemView.context
+            val intent = Intent(context, PostCommentActivity::class.java).apply {
+                putExtra("imageUser", currentItem.imageUser)
+                putExtra("nameUser", currentItem.nameUser)
+                putExtra("imagePost", currentItem.imagePost)
+                putExtra("descUser", currentItem.descUser)
+                putExtra("likeUser", "${currentItem.likeUser} Likes")
+                putExtra("dateUser", currentItem.dateUser)
+            }
+            context.startActivity(intent)
+
         }
     }
 

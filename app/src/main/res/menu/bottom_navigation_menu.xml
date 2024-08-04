@@ -9,17 +9,17 @@
     <item
         android:id="@+id/navigation_search"
         android:icon="@drawable/add_user_icon_change"
-        android:title="Search"
+        android:title="Add User"
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/navigation_add_post"
         android:icon="@drawable/plus"
-        android:title="Add"
+        android:title="Add post"
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/navigation_lecture"
         android:icon="@drawable/lecture_icon_change"
-        android:title="Add User"
+        android:title="Courses"
         tools:ignore="HardcodedText" />
     <item
         android:id="@+id/navigation_profile"

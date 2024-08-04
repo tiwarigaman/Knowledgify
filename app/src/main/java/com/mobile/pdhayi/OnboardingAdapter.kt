@@ -3,9 +3,9 @@ package com.mobile.pdhayi
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.airbnb.lottie.LottieAnimationView
 
 class OnboardingAdapter(private val onboardingItems: List<OnboardingItem>) :
     RecyclerView.Adapter<OnboardingAdapter.OnboardingViewHolder>() {
@@ -24,14 +24,15 @@ class OnboardingAdapter(private val onboardingItems: List<OnboardingItem>) :
     }
 
     class OnboardingViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val imageView: ImageView = itemView.findViewById(R.id.imageOnboarding)
         private val textTitle: TextView = itemView.findViewById(R.id.textTitle)
         private val textDescription: TextView = itemView.findViewById(R.id.textDescription)
+        private val lottieAnimationView: LottieAnimationView = itemView.findViewById(R.id.lottie)
 
         fun bind(item: OnboardingItem) {
-            imageView.setImageResource(item.image)
             textTitle.text = item.title
             textDescription.text = item.description
+            lottieAnimationView.setAnimation(item.lottie) // Set the animation file
+            lottieAnimationView.playAnimation() // Play the animation
         }
     }
 }

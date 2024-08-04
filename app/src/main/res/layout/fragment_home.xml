@@ -24,7 +24,7 @@
             tools:ignore="HardcodedText" />
 
         <ImageView
-            android:id="@+id/notifications"
+            android:id="@+id/notificationsHome"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_gravity="center"
@@ -38,22 +38,39 @@
             android:layout_height="28dp"
             android:layout_gravity="center"
             android:src="@drawable/send"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
             tools:ignore="ContentDescription" />
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewStory"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewPost"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewStory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 </LinearLayout>

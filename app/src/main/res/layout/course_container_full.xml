@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="10dp"
-    android:background="@drawable/course_card_round"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/course_card_round">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/popular_course_image"
-        android:layout_width="270dp"
+        android:layout_width="150dp"
         android:layout_height="120dp"
-        android:background="@drawable/course_card_round_image"
+        android:src="@color/black"
         android:scaleType="centerCrop"
-        android:src="@color/white"
-        app:shapeAppearanceOverlay="@style/circleImageViewTopCorners"
-        tools:ignore="ContentDescription" />
+        app:shapeAppearanceOverlay="@style/circleImageViewStartCorners"
+        tools:ignore="ContentDescription,ImageContrastCheck" />
 
     <LinearLayout
-        android:layout_width="270dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         tools:ignore="UseCompoundDrawables">
-
         <TextView
             android:id="@+id/popular_course_category"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:fontFamily="@raw/sfprodisplaymedium"
-            android:paddingStart="10dp"
             android:text="Category"
-            android:textColor="#FF9B00"
             android:textSize="12sp"
+            android:paddingStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textColor="#FF9B00"
+            android:fontFamily="@raw/sfprodisplaymedium"
             tools:ignore="HardcodedText,RtlSymmetry" />
-
         <ImageView
             android:id="@+id/popular_course_bookmark"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginEnd="10dp"
             android:src="@drawable/favorite"
+            android:layout_marginEnd="10dp"
             tools:ignore="ContentDescription" />
     </LinearLayout>
 
@@ -50,47 +54,43 @@
         android:id="@+id/popular_course_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@raw/sfprodisplaymedium"
-        android:paddingStart="10dp"
         android:text="Course name"
-        android:textColor="#dedede"
         android:textSize="14sp"
+        android:paddingStart="10dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#dedede"
+        android:fontFamily="@raw/sfprodisplaymedium"
         tools:ignore="HardcodedText,RtlSymmetry" />
-
-    <LinearLayout
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingBottom="10dp"
-        tools:ignore="UseCompoundDrawables">
 
         <TextView
             android:id="@+id/popular_course_price"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:fontFamily="@raw/sfprodisplaymedium"
             android:paddingStart="10dp"
+            android:gravity="start"
             android:text="499/-"
             android:textColor="#dedede"
-            android:textSize="12sp"
+            android:textSize="14sp"
             tools:ignore="HardcodedText,RtlSymmetry" />
 
-        <View
-            android:layout_width="1dp"
-            android:layout_height="12dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="#dedede" />
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            tools:ignore="UseCompoundDrawables">
+
 
         <ImageView
             android:layout_width="12dp"
             android:layout_height="12dp"
-            android:layout_gravity="center"
-            android:layout_marginEnd="5dp"
             android:src="@drawable/baseline_star_rate_24"
+            android:layout_marginEnd="5dp"
+            android:layout_gravity="center"
             tools:ignore="ContentDescription" />
 
         <TextView
@@ -107,10 +107,11 @@
         <View
             android:layout_width="1dp"
             android:layout_height="12dp"
-            android:layout_gravity="center"
+            android:background="#dedede"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:background="#dedede" />
+            android:layout_gravity="center"
+            />
 
         <TextView
             android:id="@+id/popular_course_registered_student"
@@ -122,5 +123,7 @@
             android:textColor="#dedede"
             android:textSize="12sp"
             tools:ignore="HardcodedText,RtlSymmetry" />
+
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -5,9 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.mobile.pdhayi.fragment.HomeFragment
-import com.mobile.pdhayi.fragment.LectureFragment
-import com.mobile.pdhayi.fragment.SearchFragment
+import com.mobile.pdhayi.fragment.*
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,7 +22,6 @@ class HomeActivity : AppCompatActivity() {
                 .commit()
         }
     }
-
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         var selectedFragment: Fragment? = null
         when (item.itemId) {

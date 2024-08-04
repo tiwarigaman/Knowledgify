@@ -10,7 +10,6 @@ class AddPost : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_post)
-
         findViewById<ImageView>(R.id.backBtnSearch).setOnClickListener {
             finish()
         }

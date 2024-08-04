@@ -14,4 +14,6 @@
     <style name="CustomBottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="labelVisibilityMode">unlabeled</item>
     </style>
+    <color name="mySelectedItem">#FFFFFF</color>
+    <color name="myUnSelectedItem">#C1C1C1</color>
 </resources>

@@ -64,4 +64,10 @@ dependencies {
 //      fb login
 //    implementation(libs.facebook.login)
 
+    //lottie animation like onBoarding..
+    implementation(libs.lottie)
+    //swipe layout...
+//    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0")
+    implementation(libs.androidx.swiperefreshlayout)
+
 }

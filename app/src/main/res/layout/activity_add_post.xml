@@ -34,13 +34,13 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="POST"
-            android:textStyle="bold"
-            android:textColor="@color/link_color"
-            android:fontFamily="@raw/sfprodisplaymedium"
             android:background="@android:color/transparent"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            android:text="POST"
+            android:textColor="@color/link_color"
             android:textSize="16sp"
-            tools:ignore="HardcodedText" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,DuplicateSpeakableTextCheck" />
 
 
     </LinearLayout>
@@ -55,8 +55,8 @@
         android:padding="10dp"
         android:orientation="horizontal">
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             android:src="@drawable/user_normal"/>
 
         <TextView
@@ -84,8 +84,9 @@
         android:padding="10dp"
         android:fontFamily="@raw/sfprodisplayregular"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
         android:layout_marginEnd="10dp"
-        tools:ignore="Autofill,HardcodedText" />
+        tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
 
     <TextView
         android:layout_width="match_parent"
@@ -96,7 +97,7 @@
         android:textColor="#dedede"
         android:paddingStart="10dp"
         android:drawablePadding="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:layout_marginBottom="10dp"
         android:fontFamily="@raw/sfprodisplaymedium"
         app:drawableStartCompat="@drawable/gallery"
@@ -144,15 +145,15 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="POST"
-        android:textStyle="bold"
-        android:textColor="#dedede"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:fontFamily="@raw/sfprodisplaymedium"
         android:backgroundTint="@color/theme_color"
+        android:fontFamily="@raw/sfprodisplaymedium"
+        android:text="POST"
+        android:textColor="#dedede"
         android:textSize="16sp"
-        tools:ignore="HardcodedText" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
 
 </LinearLayout>
