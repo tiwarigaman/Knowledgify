@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="lite_black">#1E1E1E</color>
+    <color name="lite_black2">#353535</color>
     <color name="theme_color">#52B6DF</color>
     <color name="link_color">#60A9E4</color>
     <color name="lite_white">#DEDEDE</color>
@@ -16,4 +17,7 @@
     </style>
     <color name="mySelectedItem">#FFFFFF</color>
     <color name="myUnSelectedItem">#C1C1C1</color>
+    <color name="selected_tab_color">#FF0000</color>
+    <color name="unselected_tab_color">#FFFFFF</color>
+    <color name="black_annaconda">#38434f</color>
 </resources>

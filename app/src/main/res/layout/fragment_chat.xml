@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".fragment.ChatFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+
+        tools:ignore="UseCompoundDrawables,UselessParent">
+
+        <ImageView
+            android:id="@+id/backBtnChatView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Back"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_arrow_back_24"
+            tools:ignore="HardcodedText" />
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@raw/sfprodisplaymedium"-->
+<!--            android:paddingStart="20dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="Chats"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textColor="#dedede"-->
+<!--            android:textSize="22sp"-->
+<!--            tools:ignore="HardcodedText,RtlSymmetry" />-->
+        <EditText
+            android:id="@+id/lectureSearchEverything"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/seacrh_bar"
+            android:drawableStart="@drawable/my_search_small"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:fontFamily="@raw/sfprodisplayregular"
+            android:hint="Search"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="#dedede"
+            android:textColorHint="#6D6D6D"
+            android:textSize="14sp"
+            tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
+
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chats_view_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@raw/sfprodisplaymedium"
+        android:paddingStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Groups"
+        android:layout_gravity="center"
+        android:textColor="#dedede"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/groups_view_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>

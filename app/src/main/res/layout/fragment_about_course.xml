@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AboutCourseFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_course_details_opposite">
+
+            <TextView
+                android:id="@+id/popular_course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_details"
+                android:textSize="14sp"
+                android:padding="10dp"
+                android:paddingStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#dedede"
+                android:fontFamily="@raw/sfprodisplayregular"
+                tools:ignore="HardcodedText,RtlSymmetry,VisualLintLongText" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instructor"
+            android:textSize="16sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#dedede"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/user" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Robert Jr."
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#dedede"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Graphic Designer"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#dedede"
+                    android:fontFamily="@raw/sfprodisplayregular"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Chat"
+                android:src="@drawable/comment_"
+                android:layout_gravity="center"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#262626" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What you'll get"
+            android:textSize="14sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#dedede"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25 Lessons"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#dedede"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:fontFamily="@raw/sfprodisplayregular"
+            app:drawableStartCompat="@drawable/baseline_play_lesson_24"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Access Mobile, Desktop &amp; TV"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#dedede"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:fontFamily="@raw/sfprodisplayregular"
+            app:drawableStartCompat="@drawable/baseline_phone_android_24"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beginner Level"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#dedede"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:fontFamily="@raw/sfprodisplayregular"
+            app:drawableStartCompat="@drawable/level"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lifetime Access"
+            android:textSize="14sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColor="#dedede"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:fontFamily="@raw/sfprodisplayregular"
+            app:drawableStartCompat="@drawable/baseline_accessible_forward_24"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reviews"
+            android:textSize="14sp"
+            android:layout_marginStart="20dp"
+            android:textColor="#dedede"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+        <TextView
+            android:id="@+id/popular_see_all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@raw/sfprodisplayregular"
+            android:paddingEnd="20dp"
+            android:gravity="end"
+            android:layout_gravity="center"
+            android:text="SEE ALL"
+            android:layout_weight="1"
+            android:textColor="@color/link_color"
+            android:textSize="14sp"
+            app:drawableEndCompat="@drawable/baseline_arrow_forward_ios_24"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/user" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Will"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#dedede"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Graphic DesignerThis course has been very useful. Mentor was well spoken totally loved it."
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#dedede"
+                    android:fontFamily="@raw/sfprodisplayregular"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/heart"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="576 Likes"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#dedede"
+                    android:textSize="12sp"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 weeks ago"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#dedede"
+                        android:textSize="12sp"
+                        android:fontFamily="@raw/sfprodisplaymedium"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/popular_course_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.2"
+                android:layout_marginEnd="10dp"
+                android:textColor="#dedede"
+                android:textSize="12sp"
+                android:fontFamily="@raw/sfprodisplaymedium"
+                app:drawableStartCompat="@drawable/baseline_star_copy"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#262626" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/user" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Will"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#dedede"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Graphic DesignerThis course has been very useful. Mentor was well spoken totally loved it."
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#dedede"
+                    android:fontFamily="@raw/sfprodisplayregular"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/heart"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="596 Likes"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#dedede"
+                    android:textSize="12sp"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 weeks ago"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="#dedede"
+                        android:textSize="12sp"
+                        android:fontFamily="@raw/sfprodisplaymedium"
+                        tools:ignore="HardcodedText,RtlSymmetry" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.2"
+                android:layout_marginEnd="10dp"
+                android:textColor="#dedede"
+                android:textSize="12sp"
+                android:fontFamily="@raw/sfprodisplaymedium"
+                app:drawableStartCompat="@drawable/baseline_star_copy"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_enroll"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@raw/sfprodisplaymedium"
+                android:gravity="center"
+                android:text="Enroll Course - 499/-"
+                android:textColor="#dedede"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText,RtlSymmetry,TextContrastCheck" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_forward_with_circle"
+                android:contentDescription="Enroll"
+                android:padding="5dp"
+                android:src="@drawable/arrow_forward_link_color"
+                tools:ignore="HardcodedText,ImageContrastCheck" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

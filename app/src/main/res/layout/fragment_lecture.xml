@@ -149,10 +149,13 @@
             tools:ignore="HardcodedText,RtlSymmetry" />
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/popularCourse"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popularCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -164,9 +167,11 @@
             android:textSize="16sp"
             tools:ignore="HardcodedText,RtlSymmetry" />
         <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/topMentor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+            android:id="@+id/topMentor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
         />
     </LinearLayout>
 </ScrollView>

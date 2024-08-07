@@ -1,5 +1,6 @@
 package com.mobile.pdhayi.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.mobile.pdhayi.NotificationActivity
 import com.mobile.pdhayi.R
 import com.mobile.pdhayi.adapter.PostAdapter
 import com.mobile.pdhayi.adapter.StoryAdapter
@@ -33,7 +35,7 @@ class HomeFragment : Fragment() {
         view.findViewById<ImageView>(R.id.notificationsHome).setOnClickListener {
             // Handle notifications click
             //open notification fragment
-
+            startActivity(Intent(requireContext(),NotificationActivity::class.java))
         }
 
         val dataList = listOf(

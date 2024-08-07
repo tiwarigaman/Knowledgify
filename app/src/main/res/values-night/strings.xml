@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="txtCredits">www.google.com</string>
+    <string name="myDetails" tools:ignore="ExtraTranslation">Biochemical engineers learn about the development process of a variety of natural as well as artificial substances. These processes may include oil refining, ecological development, environmental changes, developing medicines, etc. B.Tech in Biochemical Engineering involves the study of various processes and technologies that can improve the quality of the healthcare sector, diagnostic processes, food processing, medicines, etc.</string>
+
 </resources>

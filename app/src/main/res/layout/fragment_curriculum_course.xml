@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CurriculumCourseFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_course_details_opposite">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UseCompoundDrawables">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Section 01 - "
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="#dedede"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Introduction"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/link_color"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="25 min"
+                    android:textSize="14sp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/link_color"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_enroll"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    android:gravity="center"
+                    android:text="Enroll Course - 499/-"
+                    android:textColor="#dedede"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,RtlSymmetry,TextContrastCheck" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/arrow_forward_with_circle"
+                    android:contentDescription="Enroll"
+                    android:padding="5dp"
+                    android:src="@drawable/arrow_forward_link_color"
+                    tools:ignore="HardcodedText,ImageContrastCheck" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

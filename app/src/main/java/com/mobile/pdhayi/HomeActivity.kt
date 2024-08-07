@@ -5,9 +5,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.mobile.pdhayi.fragment.*
+import com.mobile.pdhayi.fragment.ChatFragment
+import com.mobile.pdhayi.fragment.LectureFragment
+import com.mobile.pdhayi.fragment.ProfileFragment
+import com.mobile.pdhayi.fragment.SearchFragment
+import com.mobile.pdhayi.fragment.TabsFragment
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), ChatFragment.OnBackButtonClickListener {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -18,14 +23,15 @@ class HomeActivity : AppCompatActivity() {
         // Set default fragment
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, HomeFragment())
+                .replace(R.id.fragment_container, TabsFragment())
                 .commit()
         }
     }
+
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         var selectedFragment: Fragment? = null
         when (item.itemId) {
-            R.id.navigation_home -> selectedFragment = HomeFragment()
+            R.id.navigation_home -> selectedFragment = TabsFragment()
             R.id.navigation_search -> selectedFragment = SearchFragment()
             R.id.navigation_add_post -> {
                 val intent = Intent(this, AddPost::class.java)
@@ -41,5 +47,11 @@ class HomeActivity : AppCompatActivity() {
                 .commit()
         }
         true
+    }
+
+    override fun onBackButtonClicked() {
+        // Switch to the Home tab when the back button is clicked in the ChatFragment
+        val tabsFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as? TabsFragment
+        tabsFragment?.onBackButtonClicked()
     }
 }

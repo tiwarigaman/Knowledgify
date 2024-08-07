@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="130dp"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:background="@drawable/card_corners"
+    android:padding="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/group_image_chat"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:src="@drawable/user" />
+
+    <TextView
+        android:id="@+id/group_name_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/lite_white" />
+    <TextView
+        android:id="@+id/group_follower_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="12sp"
+        android:textColor="@color/lite_white"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/group_follow_button_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Follow"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/accepct_round_button"
+        android:textColor="@color/link_color"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

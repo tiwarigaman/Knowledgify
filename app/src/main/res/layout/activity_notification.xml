@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".NotificationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/backBtnNotification"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_arrow_back_24"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            android:text="Notifications"
+            android:layout_gravity="center"
+            android:textColor="@color/lite_white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@raw/sfprodisplaymedium"
+        android:text="Mark as read"
+        android:layout_gravity="end"
+        android:textColor="@color/lite_white"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notificationRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"/>
+</LinearLayout>

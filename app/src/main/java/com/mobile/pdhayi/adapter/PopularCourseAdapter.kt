@@ -1,13 +1,16 @@
 package com.mobile.pdhayi.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.imageview.ShapeableImageView
+import com.mobile.pdhayi.CourseDetailsActivity
 import com.mobile.pdhayi.R
 import com.mobile.pdhayi.data_modal.PopularCourseDataClass
 
@@ -24,6 +27,8 @@ class PopularCourseAdapter(
         val courseRating : TextView = itemView.findViewById(R.id.popular_course_rating)
         val courseStd : TextView = itemView.findViewById(R.id.popular_course_registered_student)
         val courseFavorite : ImageView = itemView.findViewById(R.id.popular_course_bookmark)
+        val click : LinearLayout = itemView.findViewById(R.id.course_click)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -39,6 +44,10 @@ class PopularCourseAdapter(
         holder.coursePrice.text = currentItem.coursePrice
         holder.courseRating.text = currentItem.courseRating
         holder.courseStd.text = currentItem.courseStd
+        holder.click.setOnClickListener {
+            holder.itemView.context.startActivity(Intent(holder.itemView.context,CourseDetailsActivity::class.java))
+
+        }
     }
 
     override fun getItemCount(): Int = itemList.size

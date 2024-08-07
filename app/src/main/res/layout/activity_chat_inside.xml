@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".ChatInsideActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables,UselessParent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/item_background_selector_for_chat"
+            >
+            <ImageView
+                android:id="@+id/backBtnChatView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="Back"
+                android:layout_gravity="center"
+                android:src="@drawable/baseline_arrow_back_24"
+                tools:ignore="HardcodedText" />
+            <ImageView
+                android:id="@+id/user_image_chat_inside"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/user"
+                tools:ignore="ContentDescription" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/username_chat_inside"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            android:paddingStart="10dp"
+            android:layout_weight="1"
+            android:text="username"
+            android:layout_gravity="center"
+            android:textColor="#dedede"
+            android:textSize="22sp"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat_preview_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/messageUser"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/chat_input"
+            android:hint="Enter your message"
+            android:inputType="textLongMessage"
+            android:maxLines="4"
+            android:padding="15dp"
+            android:textColor="#dedede"
+            android:textColorHint="#4A4A4A"
+            android:textSize="14sp"
+            tools:ignore="Autofill,HardcodedText,LabelFor,RelativeOverlap,TextFields,TouchTargetSizeCheck,TextContrastCheck,VisualLintTextFieldSize" />
+
+
+        <FrameLayout
+            android:id="@+id/sendButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/chat_input"
+            android:padding="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/baseline_send_24" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

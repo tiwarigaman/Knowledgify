@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".CourseDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/course_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="-5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_course_details">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp"
+                android:gravity="center"
+                tools:ignore="UseCompoundDrawables">
+                <TextView
+                    android:id="@+id/popular_course_category"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textSize="12sp"
+                    android:paddingStart="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:textColor="#FF9B00"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/baseline_star_rate_24"
+                    android:layout_marginEnd="5dp"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:id="@+id/popular_course_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.2"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#dedede"
+                    android:textSize="12sp"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/popular_course_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course name"
+                android:textSize="14sp"
+                android:paddingStart="10dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="#dedede"
+                android:fontFamily="@raw/sfprodisplaymedium"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_course_details"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/camera"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21 Class"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#dedede"
+                    android:textSize="11sp"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:background="#dedede"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp" />
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/baseline_access_time_24"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="42 Hours"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="#dedede"
+                    android:textSize="11sp"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+                <TextView
+                    android:id="@+id/popular_course_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:gravity="end"
+                    android:text="499/-"
+                    android:textColor="#dedede"
+                    android:textSize="14sp"
+                    android:fontFamily="@raw/sfprodisplaymedium"
+                    tools:ignore="HardcodedText,RtlSymmetry" />
+            </LinearLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout_course"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabSelectedTextColor="@color/white"
+                app:tabIndicatorColor="@color/link_color" />
+        </LinearLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_course"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

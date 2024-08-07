@@ -15,6 +15,15 @@
         android:theme="@style/Theme.Pdhayi"
         tools:targetApi="31">
         <activity
+            android:name=".CourseDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatInsideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
             android:name=".PostCommentActivity"
             android:exported="false" />
         <activity
@@ -43,9 +52,7 @@
             android:exported="false" />
         <activity
             android:name=".SignInNormal"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
