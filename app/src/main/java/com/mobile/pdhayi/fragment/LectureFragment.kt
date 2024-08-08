@@ -35,6 +35,12 @@ class LectureFragment : Fragment(), CategoryBottomSheet.OnCategorySelectedListen
         categorySearchLecture = view.findViewById(R.id.categorySearchLecture)
         val imageSlider = view.findViewById<ImageSlider>(R.id.image_slider_lecture)
         val popularCoursesButton : TextView = view.findViewById(R.id.popular_see_all)
+//        view.findViewById<ImageView>(R.id.bell).setOnClickListener {
+//            val intent = Intent(requireContext(), PDFViewerActivity::class.java)
+//            intent.putExtra("PDF_URL", "https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf")
+//            intent.putExtra("PDF_TITLE", "Sample PDF")
+//            startActivity(intent)
+//        }
         val imageList = ArrayList<SlideModel>()
         // Set click listener on the button to replace the fragment
         popularCoursesButton.setOnClickListener {

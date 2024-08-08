@@ -59,8 +59,6 @@ class ChatFragment : Fragment() {
             ChatMessageDataClass("JaneDoe", "I'm good, thanks!", "1m ago"),
             ChatMessageDataClass("JaneDoe", "I'm good, thanks!", "1m ago"),
             ChatMessageDataClass("JaneDoe", "I'm good, thanks!", "1m ago"),
-            ChatMessageDataClass("JaneDoe", "I'm good, thanks!", "1m ago"),
-            ChatMessageDataClass("JaneDoe", "I'm good, thanks!", "1m ago"),
             // Add more messages here
         )
 

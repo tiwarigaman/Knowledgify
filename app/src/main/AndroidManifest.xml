@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Pdhayi"
         tools:targetApi="31">
         <activity
+            android:name=".PDFViewerActivity"
+            android:exported="false" />
+        <activity
             android:name=".CourseDetailsActivity"
             android:exported="false" />
         <activity

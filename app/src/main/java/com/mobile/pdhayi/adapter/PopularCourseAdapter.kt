@@ -45,8 +45,16 @@ class PopularCourseAdapter(
         holder.courseRating.text = currentItem.courseRating
         holder.courseStd.text = currentItem.courseStd
         holder.click.setOnClickListener {
-            holder.itemView.context.startActivity(Intent(holder.itemView.context,CourseDetailsActivity::class.java))
-
+            val context = holder.itemView.context
+            val intent = Intent(context, CourseDetailsActivity::class.java).apply {
+                putExtra("courseImage", currentItem.courseImage)
+                putExtra("courseCategory", currentItem.courseCategory)
+                putExtra("courseName", currentItem.courseName)
+                putExtra("coursePrice", currentItem.coursePrice)
+                putExtra("courseRating", currentItem.courseRating)
+                putExtra("courseStd", currentItem.courseStd)
+            }
+            context.startActivity(intent)
         }
     }
 

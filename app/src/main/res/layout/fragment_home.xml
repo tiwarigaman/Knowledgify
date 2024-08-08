@@ -33,7 +33,7 @@
             tools:ignore="ContentDescription" />
 
         <ImageView
-            android:id="@+id/chat"
+            android:id="@+id/chatButton"
             android:layout_width="24dp"
             android:layout_height="28dp"
             android:layout_gravity="center"

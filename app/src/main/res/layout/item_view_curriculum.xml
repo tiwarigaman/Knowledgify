@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        tools:ignore="UseCompoundDrawables,UselessParent">
+
+        <TextView
+            android:id="@+id/course_number"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="01"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:textColor="#dedede"
+            android:background="@drawable/bg_curriculum_number"
+            android:fontFamily="@raw/sfprodisplaymedium"
+            tools:ignore="HardcodedText,RtlSymmetry" />
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/course_chapter_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Robert Jr."
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:textColor="#dedede"
+                android:fontFamily="@raw/sfprodisplaymedium"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/course_chapter_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graphic Designer"
+                android:textSize="14sp"
+                android:layout_marginStart="10dp"
+                android:textColor="#dedede"
+                android:fontFamily="@raw/sfprodisplayregular"
+                tools:ignore="HardcodedText,RtlSymmetry" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/course_play"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Chat"
+            android:src="@drawable/baseline_play_circle_filled_24"
+            android:layout_gravity="center"
+            tools:ignore="HardcodedText" />
+        <ImageView
+            android:id="@+id/view_notes"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Chat"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/pdf_link_color"
+            android:layout_gravity="center"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

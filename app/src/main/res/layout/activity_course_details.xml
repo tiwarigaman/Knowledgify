@@ -18,8 +18,7 @@
         <ImageView
             android:id="@+id/course_thumbnail"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:scaleType="centerCrop"
+            android:layout_height="wrap_content"
             tools:ignore="ContentDescription" />
 
         <LinearLayout
@@ -39,7 +38,7 @@
                 android:gravity="center"
                 tools:ignore="UseCompoundDrawables">
                 <TextView
-                    android:id="@+id/popular_course_category"
+                    android:id="@+id/course_details_category"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="Category"
@@ -58,7 +57,7 @@
                     android:layout_marginEnd="5dp"
                     tools:ignore="ContentDescription" />
                 <TextView
-                    android:id="@+id/popular_course_rating"
+                    android:id="@+id/course_rating_details"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="4.2"
@@ -70,7 +69,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/popular_course_name"
+                android:id="@+id/course_name_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Course name"
@@ -128,7 +127,7 @@
                     android:fontFamily="@raw/sfprodisplaymedium"
                     tools:ignore="HardcodedText,RtlSymmetry" />
                 <TextView
-                    android:id="@+id/popular_course_price"
+                    android:id="@+id/price_course_details"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -147,6 +146,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:tabSelectedTextColor="@color/white"
+                app:tabRippleColor="@color/lite_black2"
                 app:tabIndicatorColor="@color/link_color" />
         </LinearLayout>
 

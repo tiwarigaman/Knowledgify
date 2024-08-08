@@ -69,5 +69,6 @@ dependencies {
     //swipe layout...
 //    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0")
     implementation(libs.androidx.swiperefreshlayout)
-
+    //pdf viewer
+    implementation(libs.pdf.viewer)
 }
