@@ -71,4 +71,6 @@ dependencies {
     implementation(libs.androidx.swiperefreshlayout)
     //pdf viewer
     implementation(libs.pdf.viewer)
+    //media player
+    implementation("com.google.android.exoplayer:exoplayer:2.19.0")
 }

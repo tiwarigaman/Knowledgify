@@ -1,20 +1,28 @@
 package com.mobile.pdhayi
 
 import android.annotation.SuppressLint
+import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.ui.PlayerView
+import com.google.android.exoplayer2.util.Util
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.mobile.pdhayi.fragment.AboutCourseFragment
 import com.mobile.pdhayi.fragment.CurriculumCourseFragment
 class CourseDetailsActivity : AppCompatActivity() {
+    private lateinit var player: ExoPlayer
+    private lateinit var playerView: PlayerView
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +46,20 @@ class CourseDetailsActivity : AppCompatActivity() {
         courseNameView.text = courseName
         priceView.text = coursePrice
         rateView.text = courseRating
+        playerView = findViewById(R.id.playerView)
+
+        thumbnail.isVisible = false
+        // Initialize ExoPlayer
+        player = ExoPlayer.Builder(this).build()
+        playerView.player = player
+
+        // Prepare the MediaItem
+        val mediaItem = MediaItem.fromUri(Uri.parse("https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"))
+        player.setMediaItem(mediaItem)
+
+        // Prepare and start playback
+        player.prepare()
+        player.playWhenReady = true
 
         val adapter = ViewPagerAdapterCourse(
             this,
@@ -87,5 +109,37 @@ class CourseDetailsActivity : AppCompatActivity() {
             }
             return fragment
         }
+    }
+    override fun onStart() {
+        super.onStart()
+        if (Util.SDK_INT > 23) {
+            player.playWhenReady = true
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (Util.SDK_INT <= 23 || player == null) {
+            player.playWhenReady = true
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (Util.SDK_INT <= 23) {
+            player.playWhenReady = false
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (Util.SDK_INT > 23) {
+            player.playWhenReady = false
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        player.release()
     }
 }
