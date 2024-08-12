@@ -19,7 +19,8 @@
             android:exported="false" />
         <activity
             android:name=".CourseDetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:configChanges="orientation|screenSize|keyboardHidden"/>
         <activity
             android:name=".ChatInsideActivity"
             android:exported="false" />

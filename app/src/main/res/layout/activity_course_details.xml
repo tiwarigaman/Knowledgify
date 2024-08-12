@@ -20,16 +20,45 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:ignore="ContentDescription" />
-        <com.google.android.exoplayer2.ui.PlayerView
-            android:id="@+id/playerView"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"/>
+            android:layout_height="wrap_content">
+            <com.google.android.exoplayer2.ui.StyledPlayerView
+                android:id="@+id/player_view"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:keepScreenOn="true"
+                app:show_subtitle_button="true"
+                app:resize_mode="fixed_width"
+                app:show_buffering="when_playing"
+                app:use_artwork="true"
+                app:use_controller="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageButton
+                android:id="@+id/full_screen_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Fullscreen"
+                android:src="@drawable/baseline_fullscreen_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias=".05"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck,ImageContrastCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginTop="-5dp"
+            android:layout_marginTop="5dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/bg_course_details">

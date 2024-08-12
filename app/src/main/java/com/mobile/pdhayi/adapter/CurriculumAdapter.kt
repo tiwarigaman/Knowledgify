@@ -16,7 +16,8 @@ class CurriculumAdapter(
     private val itemList: List<CurriculumDataClass>,
     private val layoutResId: Int
 ) : RecyclerView.Adapter<CurriculumAdapter.MyViewHolder>() {
-
+    private var onPlayButtonClickListener: ((String) -> Unit)? = null
+    var playingItemPosition: Int = -1  // Track the position of the currently playing item
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 //        val courseImage: ShapeableImageView = itemView.findViewById(R.id.popular_course_image)
         val number : TextView = itemView.findViewById(R.id.course_number)
@@ -40,6 +41,12 @@ class CurriculumAdapter(
         holder.number.text = "0${currentItem.sequence}"
         holder.title.text = currentItem.name
         holder.duration.text = currentItem.duration
+        // Update the play button icon based on whether this item is playing
+        if (position == playingItemPosition) {
+            holder.play.setImageResource(R.drawable.baseline_play_lesson_24) // Replace with your pause icon
+        } else {
+            holder.play.setImageResource(R.drawable.baseline_play_circle_filled_24) // Replace with your play icon
+        }
 
         holder.pdf.setOnClickListener {
             val intent = Intent(holder.itemView.context, PDFViewerActivity::class.java)
@@ -47,7 +54,16 @@ class CurriculumAdapter(
             intent.putExtra("PDF_TITLE", "Sample PDF")
             holder.itemView.context.startActivity(intent)
         }
+        holder.play.setOnClickListener {
+//            onPlayButtonClickListener?.invoke(currentItem.video)
+            // Notify the listener and update the play button state
+            onPlayButtonClickListener?.invoke(currentItem.video)
+        }
+
     }
 
     override fun getItemCount(): Int = itemList.size
+    fun setOnPlayButtonClickListener(listener: (String) -> Unit) {
+        onPlayButtonClickListener = listener
+    }
 }

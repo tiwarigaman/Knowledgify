@@ -1,6 +1,7 @@
 package com.mobile.pdhayi.fragment
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -14,6 +15,20 @@ import com.mobile.pdhayi.adapter.CurriculumAdapter
 import com.mobile.pdhayi.data_modal.CurriculumDataClass
 
 class CurriculumCourseFragment : Fragment() {
+
+    interface OnPlayButtonClickListener {
+        fun onPlayButtonClick(videoUrl: String)
+    }
+    private var playButtonClickListener: OnPlayButtonClickListener? = null
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnPlayButtonClickListener) {
+            playButtonClickListener = context
+        } else {
+            throw ClassCastException("$context must implement OnPlayButtonClickListener")
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,15 +53,23 @@ class CurriculumCourseFragment : Fragment() {
         val recyclerView = view.findViewById<RecyclerView>(R.id.curriculumRecyclerView)
         //prepare list
         val itemList  = listOf(
-            CurriculumDataClass("1","Get the most from this!","15 min","//","https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf"),
-            CurriculumDataClass("2","Thanks a lot for taking the course","7 min","//","https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf"),
-            CurriculumDataClass("3","How to get most out of this course","9 min","//","https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf"),
-            CurriculumDataClass("4","Kotlin Updates and Why you should..","20 min","//","https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf"),
+            CurriculumDataClass("1","Get the most from this!","15 min","https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf"),
+            CurriculumDataClass("2","Thanks a lot for taking the course","7 min","https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf"),
+            CurriculumDataClass("3","How to get most out of this course","9 min","https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf"),
+            CurriculumDataClass("4","Kotlin Updates and Why you should..","20 min","https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","https://fms.aktu.ac.in/Resources/aktu/pdf/syllabus/Syllabus2324/B.Tech_2nd_Yr_CSE_v3.pdf"),
         )
 
         val adapter = CurriculumAdapter(itemList, R.layout.item_view_curriculum)
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = adapter
 
+        adapter.setOnPlayButtonClickListener { videoUrl ->
+            playButtonClickListener?.onPlayButtonClick(videoUrl)
+        }
+
+    }
+    override fun onDetach() {
+        super.onDetach()
+        playButtonClickListener = null
     }
 }
