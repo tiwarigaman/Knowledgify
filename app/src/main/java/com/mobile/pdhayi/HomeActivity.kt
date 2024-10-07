@@ -18,6 +18,7 @@ class HomeActivity : AppCompatActivity(), ChatFragment.OnBackButtonClickListener
         setContentView(R.layout.activity_home)
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottom_navigation_view)
+        @Suppress("DEPRECATION")
         bottomNavigationView.setOnNavigationItemSelectedListener(navListener)
 
         // Set default fragment
@@ -28,6 +29,7 @@ class HomeActivity : AppCompatActivity(), ChatFragment.OnBackButtonClickListener
         }
     }
 
+    @Suppress("DEPRECATION")
     private val navListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         var selectedFragment: Fragment? = null
         when (item.itemId) {
