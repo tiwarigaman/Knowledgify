@@ -227,6 +227,7 @@ class CourseDetailsActivity : AppCompatActivity(),
 //        }
 //    }
 //
+
     override fun onResume() {
         super.onResume()
         if (Util.SDK_INT <= 23 || player == null) {
