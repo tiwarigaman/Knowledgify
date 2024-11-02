@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.mobile.pdhayi
 
 import android.annotation.SuppressLint
@@ -147,7 +149,6 @@ class CourseDetailsActivity : AppCompatActivity(),
 
     private fun exitFullscreen() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_VISIBLE
-
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
         playerView.layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
         playerView.layoutParams.width = ViewGroup.LayoutParams.MATCH_PARENT
@@ -192,7 +193,6 @@ class CourseDetailsActivity : AppCompatActivity(),
         }
     }
 
-
     class ViewPagerAdapterCourse(
         fragmentActivity: FragmentActivity,
         private val courseImage: String?,
@@ -202,9 +202,7 @@ class CourseDetailsActivity : AppCompatActivity(),
         private val courseRating: String?,
         private val courseStd: String?
     ) : FragmentStateAdapter(fragmentActivity) {
-
         override fun getItemCount(): Int = 2
-
         override fun createFragment(position: Int): Fragment {
             val fragment = when (position) {
                 0 -> AboutCourseFragment()
